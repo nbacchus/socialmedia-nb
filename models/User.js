@@ -11,13 +11,13 @@ const UserSchema = new Schema(
     email: {
       type: String,
       unique: true,
-      required: [true, "Please provide a username."],
+      required: [true, "Please enter a username."],
       trim: true,
       match: [/.+\@.+\..+/, "Please enter a valid email address."],
     },
     thoughts: [
       {
-        type: SchemaTypes.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Thought",
       },
     ],
